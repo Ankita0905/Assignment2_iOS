@@ -67,7 +67,7 @@ class TaskListTableVC: UITableViewController, UISearchBarDelegate {
               cell?.textLabel?.text = task.title
               cell?.detailTextLabel?.text = "\(task.days) days "
               if task.days == 0 {
-                cell?.contentView.backgroundColor = .green
+                cell?.contentView.backgroundColor = .cyan
                 cell?.detailTextLabel?.text = "Completed 😃"
                  
               }
@@ -85,8 +85,8 @@ class TaskListTableVC: UITableViewController, UISearchBarDelegate {
                 cell?.textLabel?.text = task.title
                 cell?.detailTextLabel?.text = "\(task.days) days "
                 if task.days == 0 {
-                  cell?.contentView.backgroundColor = .green
-                  cell?.detailTextLabel?.text = "Completed"
+                  cell?.contentView.backgroundColor = .cyan
+                  cell?.detailTextLabel?.text = "Completed 😃"
                    
                 }
                 else {

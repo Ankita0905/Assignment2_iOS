@@ -27,13 +27,8 @@ class AddTaskVC: UIViewController {
              NotificationCenter.default.addObserver(self, selector: #selector(SaveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
              
          }
-         
-
-       
-
-         
-         
-         @IBAction func addTask(_ sender: UIBarButtonItem) {
+   
+         @IBAction func addTask(_ sender: UIButton) {
              let title1 = textfields[0].text ?? ""
              let days1 = Int(textfields[1].text ?? "0") ?? 0
                         
@@ -45,8 +40,14 @@ class AddTaskVC: UIViewController {
                              textField.text = ""
                             textField.resignFirstResponder()
                         }
+//             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//
+//                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "tasktable") as! TaskListTableVC
+//                        self.navigationController?.pushViewController(nextViewController, animated: true)
              
-             
+            
+            
+            
                     }
          
          
@@ -84,6 +85,8 @@ class AddTaskVC: UIViewController {
 
              }
               LoadCoreData()
+            
+           
          }
 
          func LoadCoreData(){
